@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+
+        nav{
+           height: 70px;
+           background-color: rgb(151, 235, 235);
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+          
+        }
+        nav .logo{
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        nav .tabs{
+            width: 40%;
+            height: 50%;
+            /* background-color: rgb(226, 224, 221); */
+            
+         }
+        .logo img{
+            margin-left: 50px;
+
+        }
+        .gs{
+          margin-left: 50px;
+          font-size: 30px;
+          color: darkred;
+          font-style: italic;
+        }
+        ul{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        li{
+            list-style-type: none;
+            
+        }
+    .landingpage{
+       height: 100vh;
+       background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ-JypBAZ93JPiq4Yy1acybzk1YB7a2XRRiQ&s");
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size:cover;
+       display: flex;
+       align-items: start;
+       justify-content: center;
+       flex-direction: column;
+      }
+      .landingpage h4{
+        font-size: 40px;
+        color:deeppink;
+        margin: 0px 0px 0px 100px;
+      }
+      .landingpage h2{
+        font-size: 60px;
+        color: black;
+        margin-left: 100px;
+      }
+      .landingpage h1{
+        font-size: 70px;
+        color: white;
+        margin-left: 100px;
+      }
+      .landingpage h3{
+        padding: 0px;
+        /* font-size: 70px; */
+        color:red;
+        margin-left: 100px;
+      }
+      .landingpage p{
+        font-size: 25px;
+        margin-left: 100px;
+      }
+      .landingpage button{
+        margin: 20px 0px 0px 110px;
+        height: 60px;
+        width: 260px;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJKL_3bh4ka4rdBzL7GLq0rPA_zXmJSDGDTw&s");
+        background-repeat: no-repeat;
+        background-position:center;
+        background-size: cover;
+        border: none;
+      
+    }
+
+      /* /featurs/ */
+      .features{
+        height: 290px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .features .f-card{
+        height: 175px;
+        width: 165px;
+        background-color: aqua;
+        border: 3px solid red;
+        border-radius: 10px;
+        
+      }
+      .f-card:hover{
+        transform: scale(1.2);
+        transition:3s;
+        box-shadow:5px 2px 30px color(srgb red green blue)
+      }
+      .features img{
+        width: 100%;
+        border-bottom: 10px;
+      }
+      .features button{
+        height: 30px;
+        width: 110px;
+        padding: 10px;
+        line-height: 1;
+        align-content:center ;
+        margin:12px 0px 0px 30px;
+        border: none;
+        border-radius: 5px;
+      }
+      .products h1{
+        text-align: center;
+        align-content: center;
+        font-size: 70px;
+      }
+      .products p{
+        text-align: center;
+        align-content: center;
+        font-size: 20px;
+
+      }
+      .p-card{
+        height: 370px;
+        width: 280px;
+      }
+      .p-card img{
+        width: 252px;
+        height: 252px;
+        border-radius: 20px;
+
+      }
+      .p-card span{
+        color: grey;
+        margin-left: 10px;
+        font-size: 20px;
+
+      }
+      .p-card h4{
+        font-size: 22px;
+        font-weight: 600;
+        margin-left: 10px;
+      }
+      .p-card div{
+        display: flex;
+        justify-content: flex-start;
+        align-items: start;
+      }
+      .p-card .start{
+        margin: 6px 0px 6px 10px;
+      }
+    #price{
+        color: rgb(75, 197, 201);
+        font-size: 18px;
+        font-weight: 500;
+      }
+      .p-card #cart{
+        position: relative;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        height: 46px;
+        width: 48px;
+      }
+      #cart i{
+        
+        height: 100%;
+        width: 100%;
+      }
+      .a {
+            width: 100%;
+            height: max-content;
+            /* border: 2px solid black; */
+           
+        }
+        .a h1{
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        /* img{
+            height: 200px;
+            width: 200px; */
+        /* } */
+        .a .box{
+            height: 80%;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            
+        }
+        .box1 .tt{
+          background-color: aqua;
+        border: 3px solid black;
+        border-radius: 10px;
+        }
+        .box .tt{
+          background-color: aqua;
+        border: 3px solid black;
+        border-radius: 10px;
+        }
+        .box1 .td{
+          background-color: aqua;
+        border: 3px black;
+        border-radius: 10px;
+        }
+        .box2 .tt{
+          background-color: aqua;
+        border: 3px solid black;
+        border-radius: 10px;
+        }
+        .box3 .tt{
+          background-color: aqua;
+        border: 3px solid black;
+        border-radius: 10px;
+        }
+        .s {
+            width: 100%;
+            height: max-content;
+            /* border: 2px solid black; */
+        }
+        .s h1{
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .s .box1{
+            height: 80%;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .p {
+            width: 100%;
+            height: max-content;
+            /* border: 2px solid black; */
+        }
+        .p h1{
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .p .box2{
+            height: 80%;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .s {
+            width: 100%;
+            height: max-content;
+            /* border: 2px solid black; */
+        }
+        .s h1{
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .s .box1{
+            height: 80%;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .m {
+            width: 100%;
+            height: max-content;
+            /* border: 2px solid black; */
+        }
+        .m h1{
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .m .box3{
+            height: 80%;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    </style>
+    </style>
+</head>
+<body>
+  
+  <nav>
+    <div class="logo">
+      <div class="gs"><h1>Food<b>io</b></h1></div>
+        <!-- <img src="" alt="" height="60px" width="60px"> -->
+    </div>
+        <div class="tabs">
+            <ul>
+                  <li><a href=""></a>HOME</li>
+                  <li><a href=""></a>ABOUT</li>
+                  <li><a href=""></a>SHOP</li>
+                  <li><a href=""></a>BLOG</li>
+                  <li><a href=""></a>CONTACT US</li>
+                  <li><i class="fa-solid fa-bag-shopping"></i></li>
+             </ul>
+        
+    </div>
+    </nav>
+    <main class="main">
+        <section class="landingpage">
+            <h4>Order your best food anytime</h4>
+            <h2>A one quality food</h2>
+            <h1>Available all types of food</h1>
+            <h3>Hey,our delicious food is waiting for you,</h3>
+            <p>we are always near to you with fresh items of food</p>
+            <button>Order Now</button>
+        </section>
+      
+        <section class="features">
+            
+            <div class="f-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHh2NpvmfCFF_6xlzsUARlChP_bLXiXM-gpA&s" alt="">
+                <button style="background-color:coral;">chiense</button>
+                </div>
+            <div class="f-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQihKzXZ0YPzzvrTThpzC2uZtiM7fCEwNSVYw&s" alt="">
+                <button style="background-color:blueviolet">south indian</button></button>
+                </div>
+            <div class="f-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvC1pGhW7_BRwnGuBguLE99tfA0faYflekCA&s" alt="">
+                <button style="background-color:aqua;">punjabi dish</button>
+                </div>
+            <div class="f-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqXs5qiiZzIgI5p-NkBJNxG0g8Gw78Ke0IMw&s" alt="">
+                <button style="background-color: lightgreen;">maharastrian</button>
+                </div>
+              </main>
+              </section>
+              <div>
+                <div class="a">
+                    <h1>Chainese Food</h1>
+                    <div class="box">
+                        <div class="tt">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-czy6dxv9IoFzbIV7aovVzZtWjMi5U-YN9A&s" alt="" width="" height="">
+                            <p>price:150</p>
+                            </div>
+
+                            <div class="tt">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIW7gXZQwv74LEozyg2aQ0Th715EIfC-7x4Q&s"
+                            alt="" width="" height="">
+                            <p>price:200</p>
+                            </div>
+
+                            <div class="tt">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrrdkJ5OCFPKhca8TqrNFzLd0PH3BfTJDr6w&s"  alt="" width="" height="">
+                            <p>price:50</p>
+                            </div>
+
+                            <div class="tt">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMq7OcWrbBVAJIOfkkuAuJmPZpU_KPMUgT8w&s"
+                            alt="" width="" height="">  
+                            <p>price: $100</p>
+                            </div>
+                    </div>
+                </div>
+        
+            </div>   
+            <div>
+              <div class="s">
+                  <h1>South Food</h1>
+                  <div class="box1">
+                      <div class="tt">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAS6zezYMyl6OOJPsGGM90-XwvXU4bBXZsnQ&s" alt="" width="" height="">
+                          <p>price:150</p>
+                          </div>
+
+                          <div class="tt">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2SMB4coWqAQOM855wxGcvI4cjvmRigBoFiA&s" alt="" width="" height="">
+                          <p>price:200</p>
+                          </div>
+
+                          <div class="tt">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiBJhXMsuDy2rBoJ2AZkmE5KYuxot83EFu-g&s"  alt="" width="" height="">
+                          <p>price:50</p>
+                          </div>
+
+                          <div class="tt">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDq_aAikipZ2nf6fw7C5rJCD-1cOsfeHCAPw&s"
+                          alt="" width="" height="">  
+                          <p>price: $100</p>
+                          </div>
+                  </div>
+              </div>
+      
+          </div>    
+          <div>
+            <div class="p">
+                <h1>Punjabi Food</h1>
+                <div class="box2">
+                    <div class="tt">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvC1pGhW7_BRwnGuBguLE99tfA0faYflekCA&s" alt="" width="" height="">
+                        <p>price:150</p>
+                        </div>
+
+                        <div class="tt">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9pXPHF90ZpTSoVyZkcpcb2sNZLagnQ3cC_A&s" alt="" width="" height="">
+                        <p>price:200</p>
+                        </div>
+
+                        <div class="tt">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQnK1wtsKiG9o2LRi6GqIq9X7OFWQtCyDzSg&s"  alt="" width="" height="">
+                        <p>price:50</p>
+                        </div>
+
+                        <div class="tt">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwD6M4VvHKuHxPbrRsRJ73Zo2vm5Mm7TDHYQ&s"
+                        alt="" width="" height="">  
+                        <p>price: $100</p>
+                        </div>
+                </div>
+            </div>
+    
+        </div>
+        <div>
+          <div class="m">
+              <h1>Maharastrian Food</h1>
+              <div class="box3">
+                  <div class="tt">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_2D02oBCuA-QjMg-i8Zy8ddx8WGIAZ7nh7Q&s" alt="" width="" height="">
+                      <p>price:150</p>
+                      </div>
+
+                      <div class="tt">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsQUNvjWfdyP1dXkU4NZC6IeS1uQEePg8-8A&s" alt="" width="" height="">
+                      <p>price:100</p>
+                      </div>
+
+                      <div class="tt">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt_Wg0Mtzsm-pgkXp4fB_2hNxl7xU7g6rXcw&s"  alt="" width="" height="">
+                      <p>price:50</p>
+                      </div>
+
+                      <div class="tt">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaIXolKi8vo6zbw2Xyt9NFTw9PcZKGLmXriA&s"
+                      alt="" width="" height="">  
+                      <p>price: $120</p>
+                      </div>
+              </div>
+          </div>
+  
+      </div>        
+</body>
+</html>
